@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档：2014 | Daryl&#39;s blog</title>
+  <title>十六进制输出char类型的时候会多出6个f的问题 | Daryl&#39;s blog</title>
   <meta name="author" content="Daryl">
   
   <meta name="description" content="get busy living or get busy dying">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="十六进制输出char类型的时候会多出6个f的问题"/>
   <meta property="og:site_name" content="Daryl&#39;s blog"/>
 
   
@@ -138,25 +138,7 @@ body{ -webkit-animation: bugfix infinite 1s; }
   	<div class="inner">
       <div class="padding">
     		
-          <h2>get busy living or get busy dying</h2>
-        
-      </div>
-  	</div>
-  </div>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper" class="padding">
-<h2 class="archive-title">2014</h2>
-
-
-  <div class="archive">
-    
-      <article class="post">
-        <div class="post-content-index">
-        <header>
-          <div class="icon"></div>
-            
-              <h1 class="title transition"><a href="/2014/11/16/十六进制输出char类型的时候会多出6个f的问题/" target="_blank">十六进制输出char类型的时候会多出6个f的问题</a></h1>
-            
+          <h1>十六进制输出char类型的时候会多出6个f的问题</h1>
           <ul>
             <li>
               <span class="heading-span">Posted on: </span>
@@ -176,109 +158,110 @@ body{ -webkit-animation: bugfix infinite 1s; }
             <li>
               <span class="heading-span">With: </span>
               
-                <a href="/2014/11/16/十六进制输出char类型的时候会多出6个f的问题/#ds-thread"><span class="ds-thread-count" data-thread-key="2014/11/16/十六进制输出char类型的时候会多出6个f的问题/" data-count-type="comments"></span></a>
+
+                <a href="#ds-thread"><span class="ds-thread-count" data-thread-key="2014/11/16/十六进制输出char类型的时候会多出6个f的问题/" data-count-type="comments"></span></a>
               
-          </ul>
-        </header>
-      </article>
-    
-      <article class="post">
-        <div class="post-content-index">
-        <header>
-          <div class="icon"></div>
-            
-              <h1 class="title transition"><a href="/2014/11/16/VS中对指针的watch/" target="_blank">VS中对指针的watch</a></h1>
-            
-          <ul>
-            <li>
-              <span class="heading-span">Posted on: </span>
-              <time datetime="2014-11-16T02:35:46.000Z">11月 16 2014</time>
             </li>
-            
-              <li>
-                <span class="heading-span">By: </span>
-
-                
-                  <a href="http://daryl.cn" target="_blank">Daryl</a>
-
-                
-
-              </li>
-            
-            <li>
-              <span class="heading-span">With: </span>
-              
-                <a href="/2014/11/16/VS中对指针的watch/#ds-thread"><span class="ds-thread-count" data-thread-key="2014/11/16/VS中对指针的watch/" data-count-type="comments"></span></a>
-              
           </ul>
-        </header>
-      </article>
-    
-      <article class="post">
-        <div class="post-content-index">
-        <header>
-          <div class="icon"></div>
-            
-              <h1 class="title transition"><a href="/2014/11/15/my-new-blog/" target="_blank">This is my new blog</a></h1>
-            
-          <ul>
-            <li>
-              <span class="heading-span">Posted on: </span>
-              <time datetime="2014-11-15T14:12:41.000Z">11月 15 2014</time>
-            </li>
-            
-              <li>
-                <span class="heading-span">By: </span>
-
-                
-                  <a href="http://daryl.cn" target="_blank">Daryl</a>
-
-                
-
-              </li>
-            
-            <li>
-              <span class="heading-span">With: </span>
-              
-                <a href="/2014/11/15/my-new-blog/#ds-thread"><span class="ds-thread-count" data-thread-key="2014/11/15/my-new-blog/" data-count-type="comments"></span></a>
-              
-          </ul>
-        </header>
-      </article>
-    
-      <article class="post">
-        <div class="post-content-index">
-        <header>
-          <div class="icon"></div>
-            
-              <h1 class="title transition"><a href="/2014/11/15/hello-world/" target="_blank">Hello World</a></h1>
-            
-          <ul>
-            <li>
-              <span class="heading-span">Posted on: </span>
-              <time datetime="2014-11-15T01:24:20.000Z">11月 15 2014</time>
-            </li>
-            
-              <li>
-                <span class="heading-span">By: </span>
-
-                
-                  <a href="http://daryl.cn" target="_blank">Daryl</a>
-
-                
-
-              </li>
-            
-            <li>
-              <span class="heading-span">With: </span>
-              
-                <a href="/2014/11/15/hello-world/#ds-thread"><span class="ds-thread-count" data-thread-key="2014/11/15/hello-world/" data-count-type="comments"></span></a>
-              
-          </ul>
-        </header>
-      </article>
-    
+        
+      </div>
+  	</div>
   </div>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper" class="padding"><article class="post">
+  
+  
+    <div class="post-content">
+  
+      
+      <div class="entry">
+        
+          <p>用十六进制来输出<code>char</code>存储的一个字节的数据的时候，发现了问题，当高位大于 8 的时候，会多输出 6 个 f。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">char</span> a = <span class="number">0x80</span>;</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%x"</span>, a);</div></pre></td></tr></table></figure>
+
+<p>输出的结果就会变成这样：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ffffff80</div></pre></td></tr></table></figure>
+
+<p>而当高位小于 8 的时候，输出就正常了</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">char</span> a = <span class="number">0x79</span>;</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>, a);</div></pre></td></tr></table></figure>
+
+<p>输出的结果就没有多余的 f 了：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">79</div></pre></td></tr></table></figure>
+
+<p>搞了半天都不知道是怎么回事。后来查了资料才发现，原来<code>printf</code>在执行<code>%x</code>输出的时候，会将<code>char</code>转换为<code>int</code>类型，再输出。那么当高位大于8的时候，符号位就溢出了，于是就出现了多余的 f。这样就有解决办法了，直接在定义的时候就定义成<code>unsigned char</code>，再输出应该就没问题了吧，试了一下，还真是这样。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">unsigned</span> <span class="keyword">char</span> a = <span class="number">0x80</span>;</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%x"</span>, a);</div></pre></td></tr></table></figure>
+
+<p>输出的结果没有多余的 f 了：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">80</div></pre></td></tr></table></figure>
+
+
+        
+      </div>
+      <footer>
+        
+          
+  
+  <div class="categories">
+    <a href="/categories/C/">C</a>
+  </div>
+
+          
+          <div class="share">
+  
+
+    
+      <div class="bdsharebuttonbox"><a href="#" class="bds_twi" data-cmd="twi" title="Share to Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="Share to Facebook"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="Share to Wechat"></a><a href="#" class="bds_mail" data-cmd="mail" title="分享到邮件分享"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="Share to QQ Friends"></a><a href="#" class="bds_linkedin" data-cmd="linkedin" title="Share to linkedin"></a><a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a></div>
+	  <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","bdysc","tqq","bdxc","kaixin001","tqf","tieba","douban","tsohu","bdhome","sqq","thx","qq","ibaidu","taobao","hi","baidu","sohu","t163","qy","meilishuo","mogujie","diandian","huaban","leho","share189","duitang","hx","tfh","fx","youdao","sdo","qingbiji","ifeng","people","xinhua","ff","mail","kanshou","isohu","yaolan","wealink","xg","ty","iguba","fbook","twi","deli","s51","s139","linkedin","copy","print"],"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{},"image":{"viewList":["twi","fbook","tsina","weixin","mail","copy","sqq","linkedin","youdao","qzone","renren","douban"],"viewText":"Share to","viewSize":"24"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+    
+
+    
+
+    
+  
+</div>
+          
+
+        
+        <div class="clearfix"></div>
+      </footer>
+    </div>
+</article>
+
+
+
+<nav id="pagination" >
+    
+    
+    <a href="/2014/11/16/VS中对指针的watch/" class="alignright next" >下一页</a>
+    
+    <div class="clearfix"></div>
+</nav>
+
+<section id="comment">
+  <h2 class="title">留言</h2>
+
+  
+
+  <!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"daryl"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+  </script>
+  <!-- 多说公共JS代码 end -->
+
+  
+</section>
+
 </div></div>
     <aside id="sidebar" class="alignright"><div class="padding">
 	
