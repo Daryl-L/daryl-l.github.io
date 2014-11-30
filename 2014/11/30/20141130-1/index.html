@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>VS中对指针的watch | Daryl&#39;s blog</title>
+  <title>WPF中修改TextBox控件的右键菜单 | Daryl&#39;s blog</title>
   <meta name="author" content="Daryl">
   
   <meta name="description" content="get busy living or get busy dying">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="VS中对指针的watch"/>
+  <meta property="og:title" content="WPF中修改TextBox控件的右键菜单"/>
   <meta property="og:site_name" content="Daryl&#39;s blog"/>
 
   
@@ -138,11 +138,11 @@ body{ -webkit-animation: bugfix infinite 1s; }
   	<div class="inner">
       <div class="padding">
     		
-          <h1>VS中对指针的watch</h1>
+          <h1>WPF中修改TextBox控件的右键菜单</h1>
           <ul>
             <li>
               <span class="heading-span">Posted on: </span>
-              <time datetime="2014-11-16T02:35:46.000Z">11月 16 2014</time>
+              <time datetime="2014-11-30T03:22:35.000Z">11月 30 2014</time>
             </li>
             
               <li>
@@ -159,7 +159,7 @@ body{ -webkit-animation: bugfix infinite 1s; }
               <span class="heading-span">With: </span>
               
 
-                <a href="#ds-thread"><span class="ds-thread-count" data-thread-key="2014/11/16/VS中对指针的watch/" data-count-type="comments"></span></a>
+                <a href="#ds-thread"><span class="ds-thread-count" data-thread-key="2014/11/30/20141130-1/" data-count-type="comments"></span></a>
               
             </li>
           </ul>
@@ -176,12 +176,13 @@ body{ -webkit-animation: bugfix infinite 1s; }
       
       <div class="entry">
         
-          <p>C语言里指针总是一件很麻烦的事情，所以总是希望能在调试的时候看清楚指针的全貌。话说VS真的不愧为全球 No.1 的 IDE。</p>
-<p>现在我有一个指针变量 a，但是我想查看 a 后面的 n 个内存单元的值怎么办呐，我们来看一下：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">char</span> *a = NULL;</div><div class="line">a = (<span class="keyword">char</span> *) <span class="built_in">malloc</span>(<span class="number">47466</span> * <span class="keyword">sizeof</span>(<span class="keyword">char</span>));</div></pre></td></tr></table></figure>
+          <p>WPF 中的 TextBox 输入框，右键单击后会出现一个菜单。默认菜单有“复制、剪切、粘贴”三个选项，如下图所示。</p>
+<p><img src="http://daryl.qiniudn.com/38fc2cd42fa1e414d8e7b0ee1ed28f47.png" alt=""></p>
+<p>现在呢我想修改菜单内容，那么我们可以这么做。</p>
+<p>XAML:</p>
+<figure class="highlight xaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">TextBox</span>&gt;</div><div class="line">    &lt;<span class="keyword">TextBox</span>.<span class="keyword">ContextMenu</span>&gt;</div><div class="line">        &lt;<span class="keyword">ContextMenu</span> /&gt;</div><div class="line">    &lt;/<span class="keyword">TextBox</span>.<span class="keyword">ContextMenu</span>&gt;</div><div class="line">&lt;/<span class="keyword">TextBox</span>&gt;</div></pre></td></tr></table></figure>
 
-<p>那么在watch里这样写就可以了：a,n。</p>
-<p><img src="http://daryl.qiniudn.com/946465a6fc8a3c84f99027f3367f261b.png" alt=""></p>
+<p>然后呢在<code>&lt;ContextMenu /&gt;</code>加入你所需要的属性就可以了，具体方法还牵涉到其他内容。如果不想右键单击有菜单出现，那么这里空着就 OK 啦。</p>
 
         
       </div>
@@ -190,13 +191,13 @@ body{ -webkit-animation: bugfix infinite 1s; }
           
   
   <div class="categories">
-    <a href="/categories/Visual-Studio/">Visual Studio</a>
+    <a href="/categories/WPF/">WPF</a>
   </div>
 
           
   
   <div class="tags">
-    <a href="/tags/Visual-Studio-watch-VS/">Visual Studio,watch,VS</a>
+    <a href="/tags/C-WPF/">C#;WPF</a>
   </div>
 
           <div class="share">
@@ -224,10 +225,8 @@ body{ -webkit-animation: bugfix infinite 1s; }
 
 <nav id="pagination" >
     
-    <a href="/2014/11/16/十六进制输出char类型的时候会多出6个f的问题/" class="alignleft prev" >上一页</a>
     
-    
-    <a href="/2014/11/15/my-new-blog/" class="alignright next" >下一页</a>
+    <a href="/2014/11/21/20141121-1/" class="alignright next" >下一页</a>
     
     <div class="clearfix"></div>
 </nav>
